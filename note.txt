@@ -1,0 +1,24 @@
+GET -> endpoint -> Response
+GET -> endpoint -> Response
+
+[1->user1, 2->user2, 3->user3, 4->user4]
+offset = 3
+limit = 2
+
+FRONEND
+limit = 10
+offset = 20
+request ->
+
+offset = offset + limit
+
+
+STATUS CODE:
+
+200 - 299 -> Success
+200 - > 
+
+custom api service
+0 -> success
+1 -> auth issues
+2 -> credit is low
