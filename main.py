@@ -42,7 +42,7 @@ def get_items(item_id_gt: Optional[int]=None, limit: int=2, offset: int=0) -> li
         for i in items:
             if i['id'] > item_id_gt:
                 res.append(i)
-    res = items[offset: offset+limit]
+    res = res[offset: offset+limit]
     return res
 
 # READ ONE
