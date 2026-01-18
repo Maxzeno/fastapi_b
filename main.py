@@ -8,8 +8,8 @@ app = FastAPI()
 # In-memory "database"
 items = []
 
-class ErrorSchema(BaseModel):
-    message: str
+# class ErrorSchema(BaseModel):
+#     message: str
 
 class MessageSchema(BaseModel):
     detail: str
@@ -24,7 +24,7 @@ class ItemSchema(BaseModel):
 @app.post("/items", status_code=status.HTTP_201_CREATED,
           responses={
         201: {"description": "Item created successfully"},
-        400: {"model": ErrorSchema, "description": "Item already exists"},
+        400: {"model": MessageSchema, "description": "Item already exists"},
     },)
 def create_item(item: ItemSchema) -> ItemSchema:
     for i in items:
